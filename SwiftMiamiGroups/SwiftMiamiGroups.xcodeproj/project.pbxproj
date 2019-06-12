@@ -18,7 +18,18 @@
 		14735DA022B09EBC0062F7BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14735D9E22B09EBC0062F7BE /* LaunchScreen.storyboard */; };
 		14735DA922B0AD090062F7BE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14735DA822B0AD090062F7BE /* Post.swift */; };
 		14735DAB22B0ADE20062F7BE /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14735DAA22B0ADE20062F7BE /* PostView.swift */; };
+		14867A2222B1293400F5845B /* SwiftMiamiGroupsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14867A2122B1293400F5845B /* SwiftMiamiGroupsTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14867A2422B1293400F5845B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14735D8822B09EBA0062F7BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14735D8F22B09EBA0062F7BE;
+			remoteInfo = SwiftMiamiGroups;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14633C2222B0B50800E0A3B8 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
@@ -34,10 +45,20 @@
 		14735DA122B09EBC0062F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14735DA822B0AD090062F7BE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		14735DAA22B0ADE20062F7BE /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		14867A1F22B1293400F5845B /* SwiftMiamiGroupsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMiamiGroupsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14867A2122B1293400F5845B /* SwiftMiamiGroupsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMiamiGroupsTests.swift; sourceTree = "<group>"; };
+		14867A2322B1293400F5845B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		14735D8D22B09EBA0062F7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14867A1C22B1293400F5845B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				14735D9222B09EBA0062F7BE /* SwiftMiamiGroups */,
+				14867A2022B1293400F5845B /* SwiftMiamiGroupsTests */,
 				14735D9122B09EBA0062F7BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				14735D9022B09EBA0062F7BE /* SwiftMiamiGroups.app */,
+				14867A1F22B1293400F5845B /* SwiftMiamiGroupsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +129,15 @@
 			path = Posts;
 			sourceTree = "<group>";
 		};
+		14867A2022B1293400F5845B /* SwiftMiamiGroupsTests */ = {
+			isa = PBXGroup;
+			children = (
+				14867A2122B1293400F5845B /* SwiftMiamiGroupsTests.swift */,
+				14867A2322B1293400F5845B /* Info.plist */,
+			);
+			path = SwiftMiamiGroupsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +158,24 @@
 			productReference = 14735D9022B09EBA0062F7BE /* SwiftMiamiGroups.app */;
 			productType = "com.apple.product-type.application";
 		};
+		14867A1E22B1293400F5845B /* SwiftMiamiGroupsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14867A2822B1293400F5845B /* Build configuration list for PBXNativeTarget "SwiftMiamiGroupsTests" */;
+			buildPhases = (
+				14867A1B22B1293400F5845B /* Sources */,
+				14867A1C22B1293400F5845B /* Frameworks */,
+				14867A1D22B1293400F5845B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14867A2522B1293400F5845B /* PBXTargetDependency */,
+			);
+			name = SwiftMiamiGroupsTests;
+			productName = SwiftMiamiGroupsTests;
+			productReference = 14867A1F22B1293400F5845B /* SwiftMiamiGroupsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,6 +188,10 @@
 				TargetAttributes = {
 					14735D8F22B09EBA0062F7BE = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					14867A1E22B1293400F5845B = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 14735D8F22B09EBA0062F7BE;
 					};
 				};
 			};
@@ -155,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				14735D8F22B09EBA0062F7BE /* SwiftMiamiGroups */,
+				14867A1E22B1293400F5845B /* SwiftMiamiGroupsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +222,13 @@
 				14735DA022B09EBC0062F7BE /* LaunchScreen.storyboard in Resources */,
 				14735D9D22B09EBC0062F7BE /* Preview Assets.xcassets in Resources */,
 				14735D9A22B09EBC0062F7BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14867A1D22B1293400F5845B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +250,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14867A1B22B1293400F5845B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14867A2222B1293400F5845B /* SwiftMiamiGroupsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14867A2522B1293400F5845B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14735D8F22B09EBA0062F7BE /* SwiftMiamiGroups */;
+			targetProxy = 14867A2422B1293400F5845B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		14735D9E22B09EBC0062F7BE /* LaunchScreen.storyboard */ = {
@@ -354,6 +432,44 @@
 			};
 			name = Release;
 		};
+		14867A2622B1293400F5845B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftMiamiGroupsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolstuff.yeah.SwiftMiamiGroupsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMiamiGroups.app/SwiftMiamiGroups";
+			};
+			name = Debug;
+		};
+		14867A2722B1293400F5845B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftMiamiGroupsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolstuff.yeah.SwiftMiamiGroupsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftMiamiGroups.app/SwiftMiamiGroups";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +487,15 @@
 			buildConfigurations = (
 				14735DA522B09EBC0062F7BE /* Debug */,
 				14735DA622B09EBC0062F7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14867A2822B1293400F5845B /* Build configuration list for PBXNativeTarget "SwiftMiamiGroupsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14867A2622B1293400F5845B /* Debug */,
+				14867A2722B1293400F5845B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

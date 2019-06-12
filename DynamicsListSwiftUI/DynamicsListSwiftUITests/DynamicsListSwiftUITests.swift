@@ -7,28 +7,48 @@
 //
 
 import XCTest
+
 @testable import DynamicsListSwiftUI
 
 class DynamicsListSwiftUITests: XCTestCase {
+    var dataSource : [User]!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        self.dataSource = UserData.shared.starterUsers
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.dataSource = nil
+        super.tearDown()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testAllUserDataIsCorrectType() {
+        for eachUser in dataSource {
+            XCTAssert(eachUser.typeCheck(), "User data is the wrong type \(eachUser.id) should be an int, \(eachUser.username), \(eachUser.message), and \(eachUser.imageName) should be all be Strings")
         }
     }
-
+    
+    func testAllUsersHaveData() {
+        for eachUser in dataSource {
+            XCTAssert(eachUser.isUserValid(), "User Id \(eachUser.id) is missing data: \(eachUser)")
+        }
+    }
+    
+    func testAllUserIdsAreUnique() {
+        var uniqueDictionary = [Int: Int]()
+        for eachUser in dataSource {
+            if uniqueDictionary[eachUser.id] == nil {
+                uniqueDictionary[eachUser.id] = 1
+            } else {
+                uniqueDictionary[eachUser.id]! += 1
+            }
+        }
+        for eachId in uniqueDictionary {
+            if eachId.value > 1 {
+                XCTAssert(false, "There is a duplicate: id # \(eachId.key) is shared with multiple users")
+            }
+        }
+        XCTAssertTrue(true)
+    }
 }

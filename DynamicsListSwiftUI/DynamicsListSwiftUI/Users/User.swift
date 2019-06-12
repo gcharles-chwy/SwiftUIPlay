@@ -11,4 +11,17 @@ import SwiftUI
 struct User: Identifiable {
     var id: Int
     let username, message: String, imageName: String
+
+    func isUserValid() -> Bool {
+        return username.isEmpty == false && message.isEmpty == false && UIImage(named: imageName) != nil 
+    }
+    
+    func typeCheck() -> Bool {
+        if type(of: self.id) != Int.self
+            || type(of: self.message) != String.self
+            || type(of: self.imageName) != String.self {
+            return false
+        }
+        return true
+    }
 }
